@@ -1,10 +1,12 @@
-package com.api.autonmation.stepdefinition;
+package com.api.automation.stepdefinition;
+
+
 
 import io.cucumber.java.*;
 
 public class Hooks {
 
-    @BeforeAll
+   // @BeforeAll
     public static void beforeAll(){
         System.out.println("This is before all global hook");
     }
@@ -15,32 +17,32 @@ public class Hooks {
     }
 
     //scenario hook
-    @Before
+  //  @Before
     public void beforeSH(){
         System.out.println("This is before scenario hook method");
     }
 
     //conditional hook
-    @Before("@sanity")
+  //  @Before("@sanity")
     public void beforeCH(){
         System.out.println("This is before conditional hook method..");
     }
 
-    @After("@sanity")
+  //  @After("@sanity")
     public void afterCH(){
         System.out.println("This is after conditional hook method..");
     }
-    @After
+   // @After
     public void afterSH(){
         System.out.println("This is after scenario hook method");
     }
 
-    @BeforeStep
+  //  @BeforeStep
     public void beforeStep(){
         System.out.println("This is before step hook method");
 
     }
-    @AfterStep
+   // @AfterStep
     public void afterStep(){
         System.out.println("This is after scenario hook method");
     }
