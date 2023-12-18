@@ -1,5 +1,6 @@
 package com.api.automation.stepdefinition;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -69,5 +70,14 @@ public class ReqResStepDef {
         System.out.println(resp3);
 
         Assert.assertEquals(2, response.jsonPath().getLong("page") );
+    }
+
+    @And("I want to extract all ids")
+    public void iWantToExtractAllIds() {
+
+        List<Object> list = response.jsonPath().getList("data.id");
+        System.out.println(list);
+        // for(String,Object object : list)
+
     }
 }
